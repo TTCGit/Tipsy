@@ -35,7 +35,6 @@ class ViewController: UIViewController {
         tip = tipConvertToNumber / 100
     }
     
-    
     @IBAction func senderValueChanged(_ sender: UIStepper) {
         splitNumberLabel.text = String(format: "%.0f", sender.value)
         numberOfPeople = Int(sender.value)
@@ -49,7 +48,6 @@ class ViewController: UIViewController {
         if (totalBillLabel != "") {
             let result = totalBillToNumber * (1 + tip) / Double(numberOfPeople)
             finalResult = String(format: "%.2f", result)
-            print(finalResult)
         }
         
         self.performSegue(withIdentifier: "goToResults", sender: self)
@@ -63,6 +61,4 @@ class ViewController: UIViewController {
             destinationVC.split = numberOfPeople
         }
     }
-    
 }
-

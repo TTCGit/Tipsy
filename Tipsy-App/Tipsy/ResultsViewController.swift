@@ -24,9 +24,7 @@ class ResultsViewController: UIViewController {
         settingsLabel.text = "Split between \(split) people, with \(tip) tip."
     }
     
-
     @IBAction func recalculate(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
-
 }
